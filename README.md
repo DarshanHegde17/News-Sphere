@@ -1,1 +1,11 @@
 
+node_modules/
+client/node_modules/
+dist/
+client/dist/
+.vite/
+client/.vite/
+*.mp4
+.env
+.env.*
+.DS_Store
