@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsSphere — Premium Live Sports & Personalized Briefings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- 1. Top Header -->
+    <header class="site-header">
+      <a href="#" class="brand" id="brand-link">
+        <span class="brand-mark">N</span>
+        <span>NewsSphere</span>
+      </a>
+      
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="news-search" placeholder="Search sports, teams, news, topics...">
+      </div>
+      
+      <div class="nav-actions">
+        <div class="user-badge">
+          <div class="user-avatar">G</div>
+          <span>Guest Reader</span>
+        </div>
+      </div>
+    </header>
+    
+    <!-- 2. Category Sub-Navigation -->
+    <nav class="category-nav" id="category-nav-bar">
+      <button class="category-btn active" data-category="all">All News</button>
+      <button class="category-btn" data-category="sports">Sports</button>
+      <button class="category-btn" data-category="technology">Technology</button>
+      <button class="category-btn" data-category="business">Business</button>
+      <button class="category-btn" data-category="politics">Politics</button>
+      <button class="category-btn" data-category="health">Health</button>
+      <button class="category-btn" data-category="education">Education</button>
+    </nav>
+    
+    <!-- 3. Live Scoreboard Section -->
+    <section class="scoreboard-section">
+      <div class="scoreboard-controls">
+        <div class="scoreboard-filters">
+          <button class="filter-chip active" id="filter-all-scores" data-filter="all">All Matches</button>
+          <button class="filter-chip" id="filter-cricket-scores" data-filter="cricket">Cricket</button>
+          <button class="filter-chip" id="filter-soccer-scores" data-filter="soccer">Soccer</button>
+        </div>
+        
+        <div class="scoreboard-meta">
+          <div class="refresh-indicator">
+            <span class="refresh-timer-circle" id="timer-spinner"></span>
+            <span id="countdown-text">Auto-refreshing...</span>
+          </div>
+          <button class="refresh-btn" id="manual-refresh-scores" title="Manual Refresh">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Scoreboard Horizontal Scroll Component -->
+      <div class="scoreboard-scroller-outer">
+        <button class="scroll-btn left" id="scroll-left-btn" aria-label="Scroll Left">‹</button>
+        
+        <div class="scoreboard-scroller" id="sports-scoreboard">
+          <!-- Dynamically Generated Match Cards will go here -->
+          <div class="scoreboard-empty">Loading scoreboard feeds...</div>
+        </div>
+        
+        <button class="scroll-btn right" id="scroll-right-btn" aria-label="Scroll Right">›</button>
+      </div>
+    </section>
+    
+    <!-- 4. Main News Dashboard Content -->
+    <main class="main-content">
+      
+      <!-- Featured News Section -->
+      <section id="featured-section">
+        <h2 class="section-title">Featured Headlines</h2>
+        <div class="hero-article" id="featured-hero-article">
+          <!-- Dynamically Populated Hero Article -->
+        </div>
+      </section>
+      
+      <!-- Latest Grid Articles Section -->
+      <section id="articles-section">
+        <h2 class="section-title">Latest Updates</h2>
+        <div class="news-grid" id="news-articles-grid">
+          <!-- Dynamically Populated Article Cards -->
+        </div>
+      </section>
+      
+    </main>
+    
+    <!-- 5. Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 NewsSphere. All rights reserved. Real-time sports data fetched from ESPN public feeds.</p>
+    </footer>
+    
+    <!-- 6. Match Details Modal -->
+    <div class="modal-overlay" id="match-details-modal">
+      <div class="modal-container">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <div id="modal-content-details">
+          <!-- Dynamically Populated Match Details -->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
